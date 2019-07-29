@@ -1,0 +1,11 @@
+<?php
+if(isset($_SESSION['AUTH']))
+{
+	unset($_SESSION['AUTH']);
+	session_destroy();
+	header('location:../index.php');
+}else
+{
+	header('location:../index.php');
+}
+?>
